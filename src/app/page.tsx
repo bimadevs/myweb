@@ -1,25 +1,19 @@
 "use client"
 import { FloatingDock } from "@/app/components/ui/floating-dock";
 import {
-  IconBrandGithub,
-  IconBrandX,
-  IconExchange,
   IconHome,
-  IconNewSection,
-  IconTerminal2,
   IconBrandFacebook,
   IconBrandInstagram,
-  IconPhone,
   IconBrandWhatsapp,
 } from "@tabler/icons-react";
 import Image from "next/image";
-import { motion } from "framer-motion";
-import { Lamp } from "@/app/components/ui/lamp";
 import { TextRevealCard, TextRevealCardDescription, TextRevealCardTitle } from "./components/ui/text-reveal-card";
 import { Timeline } from "./components/ui/timeline";
 import { CardAnimate } from "./components/ui/card";
 import { InfiniteMovingCards } from "./components/ui/infinite-moving-cards";
 import { Footer } from "./components/ui/footer";
+import { SparklesCore } from "./components/ui/sparkles";
+
 
 export default function Home() {
   const links = [
@@ -64,10 +58,11 @@ export default function Home() {
           </p>
           <div className="grid grid-cols-2 gap-4">
             <Image
-              src="/assets/html.jpg"
+              src="/assets/html.webp"
               alt="html"
               width={500}
               height={500}
+              loading="lazy"
               className="rounded-lg object-fill h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <Image
@@ -75,6 +70,7 @@ export default function Home() {
               alt="css"
               width={500}
               height={500}
+              loading="lazy"
               className="rounded-lg object-fill h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <Image
@@ -82,13 +78,15 @@ export default function Home() {
               alt="css"
               width={500}
               height={500}
+              loading="lazy"
               className="rounded-lg object-fill h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <Image
-              src="/assets/tailwind.jpg"
+              src="/assets/tailwind.webp"
               alt="tailwind"
               width={500}
               height={500}
+              loading="lazy"
               className="rounded-lg object-fill h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
           </div>
@@ -108,31 +106,35 @@ export default function Home() {
           </p>
           <div className="grid grid-cols-2 gap-4">
             <Image
-              src="/assets/deaafrizal.PNG"
+              src="/assets/deaafrizal.webp"
               alt="Dea Afrizal"
               width={500}
               height={500}
+              loading="lazy"
               className="rounded-lg object-fill h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <Image
-              src="/assets/wpu.PNG"
+              src="/assets/wpu.webp"
               alt="Web Progaming UNPAS"
               width={500}
               height={500}
+              loading="lazy"
               className="rounded-lg object-fill h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <Image
-              src="/assets/CAI.PNG"
+              src="/assets/CAI.webp"
               alt="Creative Academy Indonesia"
               width={500}
               height={500}
+              loading="lazy"
               className="rounded-lg object-fill h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <Image
-              src="/assets/pzn.PNG"
+              src="/assets/pzn.webp"
               alt="Programmer Zaman Now"
               width={500}
               height={500}
+              loading="lazy"
               className="rounded-lg object-fill h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
           </div>
@@ -149,24 +151,27 @@ export default function Home() {
           </p>
           <div className="grid grid-cols-2 gap-4 justify-center">
             <Image
-              src="/assets/js.jpeg"
+              src="/assets/js.webp"
               alt="Javascript"
               width={500}
               height={500}
+              loading="lazy"
               className="rounded-lg object-fill h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <Image
-              src="/assets/react.png"
+              src="/assets/react.webp"
               alt="React JS"
               width={500}
               height={500}
+              loading="lazy"
               className="rounded-lg object-fill h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <Image
-              src="/assets/next.jpg"
+              src="/assets/next.webp"
               alt="Next JS"
               width={500}
               height={500}
+              loading="lazy"
               className="col-span-2 rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
           </div>
@@ -185,31 +190,35 @@ export default function Home() {
           </p>
           <div className="grid grid-cols-2 gap-4 justify-center">
             <Image
-              src="/assets/porto1.jpeg"
+              src="/assets/porto1.webp"
               alt="porto 1"
               width={500}
               height={500}
+              loading="lazy"
               className="rounded-lg object-fill h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <Image
-              src="/assets/porto2.jpeg"
+              src="/assets/porto2.webp"
               alt="Porto 2"
               width={500}
               height={500}
+              loading="lazy"
               className="rounded-lg object-fill h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <Image
-              src="/assets/porto3.jpeg"
+              src="/assets/porto3.webp"
               alt="Porto 3"
               width={500}
               height={500}
+              loading="lazy"
               className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <Image
-              src="/assets/porto4.jpeg"
+              src="/assets/porto4.webp"
               alt="Porto 4"
               width={500}
               height={500}
+              loading="lazy"
               className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
           </div>
@@ -252,7 +261,32 @@ export default function Home() {
   return (
 
     <main className="bg-dark">
-      <Lamp />
+      <div className="h-[40rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
+        <h1 className="md:text-7xl text-3xl lg:text-9xl font-bold text-center text-white relative z-20">
+          BimaDev
+        </h1>
+        <div className="w-[40rem] h-40 relative">
+          {/* Gradients */}
+          <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
+          <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
+          <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
+          <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
+
+          {/* Core component */}
+          <SparklesCore
+            background="transparent"
+            minSize={0.4}
+            maxSize={1}
+            particleDensity={600}
+            className="w-full h-full"
+            particleColor="#52d7ff"
+            particleSize={500}
+          />
+
+          {/* Radial Gradient to prevent sharp edges */}
+          <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
+        </div>
+      </div>
       <div className="flex items-center justify-center w-full z-auto bg-red-500">
         <FloatingDock
           items={links}
