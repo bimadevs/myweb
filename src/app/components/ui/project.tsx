@@ -105,7 +105,7 @@ export function Project() {
                     exit={{ opacity: 0 }}
                     href={active.ctaLink}
                     target="_blank"
-                    className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white"
+                    className="px-4 py-3 text-sm rounded-full font-bold bg-gray-800 text-white"
                   >
                     {active.ctaText}
                   </motion.a>
@@ -143,7 +143,7 @@ export function Project() {
                   height={100}
                   src={card.src}
                   alt={card.title}
-                  className="h-60 w-full  rounded-lg object-cover object-top"
+                  className="h-60 w-full  rounded-lg object-fill object-top"
                 />
               </motion.div>
               <div className="flex justify-center items-center flex-col">
@@ -226,6 +226,34 @@ const cards = [
       return (
         <p>
           ini adalah sebuah ai yang dapat mengubah gambar/screenshotan kamu menjadi code HTML dengan style dari TailwindCSS. Ini sangat cocok untuk kamu yang ingin belajar HTML. Jika ada error harap di maklumin karena menggunakan api gratis, dan silahkan generate ulang!!!  
+        </p>
+      );
+    },
+  },
+  {
+    description: "Klik untuk lihat selengkapnya...",
+    title: "Text To Image",
+    src: "/assets/ImoGen.webp",
+    ctaText: "Visit",
+    ctaLink: "http://bimaproject.rf.gd/",
+    content: () => {
+      return (
+        <p>
+          Ini adalah sebuah Ai yang dapat mengenerate text menjadi gambar. Jadi kalian dapat mengetikan perintah kepada ai untuk membuat sebuah gambar. Apabila terjadi error mohon di maklumin karena ini menggunakan API gratis
+        </p>
+      );
+    },
+  },
+  {
+    description: "Klik untuk lihat selengkapnya...",
+    title: "Chatbot",
+    src: "/assets/sri.webp",
+    ctaText: "Visit",
+    ctaLink: "http://srimustika.rf.gd/",
+    content: () => {
+      return (
+        <p>
+          Ini adalah sebuah Ai yang dapat menemani anda chatingan selayaknya manusia. Mohon di harapkan yang sopan dan mohon maaf bila terjadi sebuah error karena ini hanya sebuah AI gratis.
         </p>
       );
     },

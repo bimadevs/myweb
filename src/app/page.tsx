@@ -192,8 +192,8 @@ export default function Home() {
           </p>
           <div className="grid grid-cols-2 gap-4 justify-center">
             <Image
-              src="/assets/porto1.webp"
-              alt="porto 1"
+              src="/assets/ImoGen.webp"
+              alt="ImoGen"
               width={500}
               height={500}
               loading="lazy"
@@ -201,7 +201,7 @@ export default function Home() {
             />
             <Image
               src="/assets/magicai.webp"
-              alt="Porto 2"
+              alt="MagicAi"
               width={500}
               height={500}
               loading="lazy"
@@ -209,15 +209,15 @@ export default function Home() {
             />
             <Image
               src="/assets/ImageToUI.webp"
-              alt="Porto 3"
+              alt="Image To Code"
               width={500}
               height={500}
               loading="lazy"
               className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <Image
-              src="/assets/porto4.webp"
-              alt="Porto 4"
+              src="/assets/sri.webp"
+              alt="Chat Bot"
               width={500}
               height={500}
               loading="lazy"
